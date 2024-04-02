@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Bac Nord, Action, Police">
+  <meta name="description" content="Site pour les fans du film BAC Nord ou les personnes s'y interessant">
+  <meta name="author" content="Sarah EL MCHANTEF">
+
+  <title>Musiques</title>
+  <!--On associe la page html à une feuille de style-->
+  <link rel="stylesheet" href="../style/style.css">
+  <!--On importe les favicons-->
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon 180x180.jpg">
+  <link rel="icon" type="image/jpg" sizes="32x32" href="../img/favicon 32x32.jpg">
+  <link rel="icon" type="image/jpg" sizes="16x16" href="../img/favicon 16x16.jpg">
+  <link rel="manifest" href="../img/favicon 16x16.jpg">
+</head>
+
+<body>
+  <div class="bacnord">
+    <h1>Musiques</h1>
+  </div>
+  <nav>
+
+    <div class="navbar">
+
+      <div id="brand">
+        <header>
+          <a href="../index.html">
+            <div class="logo"><img src="../img/1062812_1600x450 (1).jpg" alt="logo_bacnord">
+          </a>
+      </div>
+      <!-- La div Navigation utilisée pour donner une couleur au background -->
+      <div class="Navigation">
+        <div id="hamburger">
+          <!--Div qui sert de "pointeur" pour remplir le #hamburger-sidebar -->
+          <div id="hamburger-content">
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a>Personnages</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="synopsis.html">Synopsis</a>
+                <a href="acteurs.html">Acteurs</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a> Contexte</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="histoire.html">Histoire Vraie</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="distribution.html"> Distribution</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="récompenses.html">Récompenses</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="musique.html">Musiques</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="quiz.html">Quiz</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="contacts.html">Contact</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="crédit.html">Crédit</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+
+
+          </div>
+        </div>
+        <!-- Le bouton du menu burger et sa forme-->
+        <button id="hamburger-button">&#9776;</button>
+        <!--L'endroit où apparaitra le menu et sous-menu lorsque l'on clique sur le bouton burger-->
+        <div id="hamburger-sidebar">
+          <div id="hamburger-sidebar-header"></div>
+          <div id="hamburger-sidebar-body"></div>
+        </div>
+
+        <!-- Un calque pour rendre le contenu de fond plus sombre-->
+        <div id="hamburger-overlay"></div>
+      </div>
+    </div>
+  </nav>
+  <br><br><br><br>
+
+  <!--On met dans cette div tous les codes iframe des vidéos YouTube-->
+  <div id="musique">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/JmbBUgAISaY" title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/MrDdRU4IZeM" title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GuDBPPwiZKo" title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/smiWpNHrk2I" title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/zIs9mwqDIVE" title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/b9mQZCFmmqo" title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <!-- Script pour afficher le menu et la sidebar lorsque l'on clique sur le bouton burger-->
+  <script type="text/javascript">
+    var content = document.querySelector('#hamburger-content');
+    var sidebarBody = document.querySelector('#hamburger-sidebar-body');
+    var button = document.querySelector('#hamburger-button');
+    var overlay = document.querySelector('#hamburger-overlay');
+    var activatedClass = 'hamburger-activated';
+    var hamburger = document.querySelector('#hamburger');
+
+    sidebarBody.innerHTML = content.innerHTML;
+
+    //Lorsque l'on clique sur le bouton on ajoute la class 'hamburger-activated' à la div hamburger, lorsque l'on reclique dessus cette class disparait.
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+      this.parentNode.classList.toggle(activatedClass);
+    });
+
+    overlay.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      this.parentNode.classList.remove(activatedClass);
+    });
+
+  </script>
+</body>
+<!--Footer avec le nom et prénom du développeur, la matière et l'année-->
+<footer>
+  <p><a href="mailto:sarah.el_mchantef@utt.fr" class="foot">© EL MCHANTEF Sarah &nbsp&nbsp-&nbsp &nbspMM01
+      &nbsp&nbsp-&nbsp &nbsp2023</a></p>
+</footer>

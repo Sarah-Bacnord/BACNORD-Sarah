@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Bac Nord, Action, Police">
+  <meta name="description" content="Site pour les fans du film BAC Nord ou les personnes s'y interessant">
+  <meta name="author" content="Sarah EL MCHANTEF">
+  <title>Contexte</title>
+  <!--On associe la page html à une feuille de style-->
+  <link rel="stylesheet" href="../style/style.css">
+  <!--On importe les favicons-->
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon 180x180.jpg">
+  <link rel="icon" type="image/jpg" sizes="32x32" href="../img/favicon 32x32.jpg">
+  <link rel="icon" type="image/jpg" sizes="16x16" href="../img/favicon 16x16.jpg">
+  <link rel="manifest" href="../img/favicon 16x16.jpg">
+</head>
+
+<body>
+  <!--titre que l'on voit affiché-->
+  <div class="bacnord">
+    <h1>Histoire Vraie</h1>
+  </div>
+  <nav>
+    <div class="navbar">
+
+      <div id="brand">
+        <header>
+          <a href="../index.html">
+            <div class="logo"><img src="../img/1062812_1600x450 (1).jpg" alt="logo_bacnord">
+          </a>
+      </div>
+
+      <div class="Navigation">
+        <div id="hamburger">
+          <!--Div qui sert de "pointeur" pour remplir le #hamburger-sidebar -->
+          <div id="hamburger-content">
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a>Personnages</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="synopsis.html">Synopsis</a>
+                <a href="acteurs.html">Acteurs</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a> Contexte</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="histoire.html">Histoire Vraie</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="distribution.html"> Distribution</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="récompenses.html">Récompenses</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="musique.html">Musiques</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="quiz.html">Quiz</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="contacts.html">Contact</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="crédit.html">Crédit</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+
+
+          </div>
+        </div>
+        <!-- Le bouton du menu burger et sa forme-->
+        <button id="hamburger-button">&#9776;</button>
+        <!--L'endroit où apparaitra le menu et sous-menu lorsque l'on clique sur le bouton burger-->
+        <div id="hamburger-sidebar">
+          <div id="hamburger-sidebar-header"></div>
+          <div id="hamburger-sidebar-body"></div>
+        </div>
+
+        <!-- Un calque pour rendre le contenu de fond plus sombre-->
+        <div id="hamburger-overlay"></div>
+      </div>
+    </div>
+  </nav>
+  <div class="textehistoire">
+    <p>"BAC Nord" s'inspire d'une affaire réelle qui a secoué Marseille en 2012, où des policiers ont été accusés de vol
+      de drogue et d'argent. Le film se base sur des témoignages et des investigations journalistiques pour offrir une
+      vision réaliste de cette affaire controversée.</p>
+  </div>
+  <section class="intro">
+    <div class="container">
+
+    </div>
+  </section>
+
+  <ul class="timeline">
+
+    <!-- Pour la 1ere infos de la timeline -->
+    <li>
+      <div class="direction-0">
+        <div class="flag-wrapper">
+          <span class="flag">2012</span>
+
+        </div>
+        <div class="desc">Des policiers de la Brigade Anti-Criminalité (BAC) des quartiers nord de Marseille sont
+          arrêtés et accusés de vol de drogue et d'argent.</div>
+      </div>
+    </li>
+
+
+
+    <!-- Pour la 2ieme infos de la timeline -->
+    <li>
+      <div class="direction-l">
+        <div class="flag-wrapper">
+          <div class="droite">
+            <span class="flag">2015</span>
+
+          </div>
+          <div class="adroite">
+            <div class="desc">Un juge d'instruction rend une ordonnance de non-lieu en faveur des policiers, mais la
+              décision est contestée par les parties civiles et le parquet.</div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <!-- Pour la 3ieme infos de la timeline -->
+    <li>
+
+      <div class="direction-2">
+        <div class="flag-wrapper">
+          <span class="flag">2017</span>
+
+        </div>
+        <div class="desc">Une enquête de Mediapart met en lumière des pratiques illégales et des violences policières
+          dans les quartiers nord de Marseille.</div>
+      </div>
+    </li>
+    <!-- Pour la 3ieme infos de la timeline -->
+    <li>
+      <div class="direction-3">
+        <div class="flag-wrapper">
+          <div class="droite">
+            <span class="flag">2018</span>
+
+          </div>
+          <div class="adroite">
+            <div class="desc">Le juge d'instruction conclut à l'absence de charges suffisantes contre les policiers
+              impliqués dans l'affaire de vol de drogue et d'argent.</div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <!-- Pour la 3ieme infos de la timeline -->
+    <li>
+      <div class="direction-4">
+        <div class="flag-wrapper">
+          <span class="flag">2019</span>
+
+        </div>
+        <div class="desc">Les familles ont dénoncé les pratiques violentes et illégales de la police dans les quartiers
+          nord de Marseille et ont appelé à une réforme du système judiciaire pour garantir une justice équitable pour
+          tous.</div>
+      </div>
+    </li>
+    <!-- Pour la 3ieme infos de la timeline -->
+    <li>
+      <div class="direction-r">
+        <div class="flag-wrapper">
+          <div class="droite">
+            <span class="flag">2020</span>
+
+          </div>
+          <div class="adroite">
+            <div class="desc">Les accusations de vol de drogue et d'argent portées contre les policiers de la BAC Nord
+              ont eu des conséquences dramatiques pour les familles des personnes impliquées dans cette affaire. </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+  </ul>
+  <!-- Script pour afficher le menu et la sidebar lorsque l'on clique sur le bouton burger-->
+  <script type="text/javascript">
+    var content = document.querySelector('#hamburger-content');
+    var sidebarBody = document.querySelector('#hamburger-sidebar-body');
+    var button = document.querySelector('#hamburger-button');
+    var overlay = document.querySelector('#hamburger-overlay');
+    var activatedClass = 'hamburger-activated';
+    var hamburger = document.querySelector('#hamburger');
+
+    sidebarBody.innerHTML = content.innerHTML;
+
+    //Lorsque l'on clique sur le bouton on ajoute la class 'hamburger-activated' à la div hamburger, lorsque l'on reclique dessus cette class disparait.
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+      this.parentNode.classList.toggle(activatedClass);
+    });
+
+    overlay.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      this.parentNode.classList.remove(activatedClass);
+    });
+
+  </script>
+
+</body>
+
+<!--Footer avec le nom et prénom du développeur, la matière et l'année-->
+<footer>
+  <p><a href="mailto:sarah.el_mchantef@utt.fr" class="foot">© EL MCHANTEF Sarah &nbsp&nbsp-&nbsp &nbspMM01
+      &nbsp&nbsp-&nbsp &nbsp2023</a></p>
+</footer>
+
+</html>

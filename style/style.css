@@ -1,0 +1,2163 @@
+@charset "utf-8";
+
+/* Encodage des caractères */
+/*Integration de la police d'ecriture Anton*/
+@font-face {
+  font-family: 'Anton';
+  src: url('../font/Anton-Regular.woff') format('woff');
+}
+
+
+body {
+  max-width: 1280px;
+  font-family: 'Anton';
+  /* Police Anton pour le contenu */
+
+  margin: auto;
+  /* Centrer horizontalement */
+
+}
+
+/* Tous les titres auront les memes caractéristiques, les titres des pages feront 40px*/
+h1 {
+  font-family: 'Anton';
+  text-align: center;
+  color: #f2f2f2;
+  letter-spacing: 2px;
+  font-size: 40px;
+  background-color: #000000;
+  width: 23%;
+  padding: 1%;
+  box-sizing: border-box;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-width: 2px;
+  border-style: double;
+  border-color: #fff;
+
+
+}
+
+
+
+/*La barre de navigation*/
+.navbar {
+  overflow: hidden;
+  background-color: #31312d;
+  /* Couleur de fond */
+  font-family: 'Anton';
+  /* Police Anton pour la barre de navigation */
+  letter-spacing: 1px;
+  margin-bottom: 2em;
+
+}
+
+
+.navbar a {
+
+  float: left;
+  font-size: 17px;
+  color: white;
+  text-align: center;
+  width: 100%;
+
+  text-decoration: none;
+
+}
+
+.texteaccueil {
+  text-align: center;
+  color: #f2f2f2;
+  margin-left: 10cm;
+  margin-right: 10cm;
+  font-family: 'candara';
+  /* Police candara pour .texteaccueil */
+  text-align: center;
+  font-size: 24px;
+
+
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  width: 10.1%;
+
+
+}
+
+/* Police pour le bouton de la barre de navigation */
+.dropdown .dropbtn {
+
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: 'Anton';
+  /* Police Anton pour le bouton */
+  letter-spacing: 1px;
+  width: 100%;
+
+}
+
+
+.logo img {
+  width: 100%;
+
+}
+
+.logo {
+  width: 12%;
+  /* Largeur du logo */
+}
+
+.logo a {
+  background-color: #000000;
+  /* Couleur de fond du lien du logo */
+}
+
+
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: rgb(84, 79, 79);
+  /* Couleur de fond lors du survol des liens de la barre de navigation et du bouton de la liste déroulante */
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: gray;
+  /* Couleur de fond de la liste déroulante */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  /* Ombre de la liste déroulante */
+  z-index: 1;
+
+}
+
+.dropdown-content a {
+  float: none;
+  color: #f2f2f2;
+  /* Couleur du texte des liens de la liste déroulante */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(158, 168, 179);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+.bandeannonce {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  /* La largeur de la bande annonce s'adapte au contenu */
+  border-width: 5px;
+  border-style: double;
+  border-color: #fff;
+}
+
+footer {
+  background-color: #000000;
+  /* Couleur de fond du footer */
+  width: 100%;
+  border-top: solid 1px black;
+  height: 1.5em;
+  padding: 0.2em;
+}
+
+/*La taille du texte et son emplacement dans le footer*/
+footer p {
+  text-align: center;
+  font-size: 1em;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/*ecriture du footer*/
+.foot {
+  color: #f2f2f2;
+  font-family: 'anton';
+  text-decoration: none;
+}
+
+/*Pour l'animation hover card dans la partie acteurs*/
+#star {
+  background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBQUFBgVFBQZGBgaGRoZGRobGBobHBkcGhoZGhgbGB0cIy8kGyIrIBsdJzclKS4wNDQ0HSM5PzkyPi0yNDIBCwsLEA8QHRISHTIpIisyMjIyNTIyMjI7MjIyMjIyMjIyMjIyNTIyMjIyMjIyMjIyNTIyMjIyMjIyMjIyMjIyMv/AABEIALcBFAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAADAAIEBQYBB//EADwQAAIBAwIEAwYEBAUFAQEAAAECEQADIRIxBCJBUQUTYQYycYGRoSNCsfAUUsHRM2JygvEVJJKy4Qei/8QAGQEAAwEBAQAAAAAAAAAAAAAAAQIDAAQF/8QAJxEAAwEAAgICAQMFAQAAAAAAAAERAgMhEjFBUXEiYfAEFDJCgRP/2gAMAwEAAhEDEQA/AL8LT1FJRRVWuls8uCRaJgbmuotC4wgAkjCqW/f0qe9RFcZrOX/ELVsAu6r/AKmA/WoNnx+3cueXbbWTMaVMCATLE4j4VkFto7F1tMxwCAFVep1Rzk+pq/8AZjhybjsVQBVAGkksQfdJJbHXoKjrWoXWMl9ZvOLnO3LERGx3B6R9KtAlQCkzUXgPFAtxrbnSA5RB35QSZ7Tqo504JrJc6K6EowWu6aeiwCFpwWi6a7prU0BhacFpwWnhaFDBgWlpogWnaaFGgLTS00bTS01qaAdNLTR9Nc00KGACtcK0crXCtGggArTCtSCtNK0aCEcrTStSCtMK0aK0AK0NlqQVphWjQNEdlpjLUhlobLRTA0R2WhstSWWhMtNRGiOy0xlqQy0NhRTFaI+mlRYpU1BAiiioK4ooqCkY6Q9Fql9peI0WXM6ZISTJA74EzselXoMAnsJ+lZD2r4qPLQOgOXOuI7CAd+veo7faRfjRQq4YKGe5cO4xCMO0McDH8ta72T4cLbZtGjU2FmTESJOkRuax7cTIzdcj+VEKwdsFQq77VvfA002EAEAjVByeYlsmTnPrU9FVSwAgT2rHeaeTS4BY3LmgiWaWI3HWUnvnEgEVq+PaLT82klSAcbtgb/Gsnx86nVtJVEt220ZuIxAk53zBz2kZBlsiMv8AwTxPSoNwEKVPM5AKgEQCD8Tnbl74rToQwkbdD3+Fee3oGgnllVC3XMhtTFirrjdYyR8YMGrTg+Li4bRkwyjmEFYVPc6lSfWROe53r0E2EUop1q4rqGUggjBHWn6aNBAYWnBadproFahhwCkBTwtOC0KGA9NdC0SKVChgzTS00+lQoYCK1wrRorkUaCAStNK0YrTCtGgaAlaYVo5WmEUaK0AK0xlozCmlaYSAGFDYVIZKGy01FaI7LQ2FSGWhslGgaI7ChsKksnrQ2UetFMVojRSo2kdqVGiwcooyCmIKMgpWx0hnE+4R3gf3+01gfH3a5xD/AIYdUhNR91YGcfGetb3jWA0yJAlj6QIz9TXlJv23uM7K7nUWIgFcnoDPftUfejowv0k5BcmNSIxIEAJLSYnmkztsK9JtIAAAIgelYLwqybnFIHthQhHNqlQFGoBQo09OmK3yn1n6f0oa9oK9EHxtSURBnW6AjuBzED6Vjb7xcZpFp2dtBxpdZlQ/bEb8p9MVqfHrqgqSG1Ij3FjqSCAs9MjtVFwfC6Smn3DzFXywk6pSNsTtjuJp0uhb2Sgh80AcjM+lleSHCBUlM4YAfH/UJrvC3tTm4CYAuPzj8S37zQoiSpjHwwRlaBwV/OtTqQIzlW/xLZhm5fQ4jOmdiK7wVxVLuW1AKql9JNzSWTUHEdtWTmN9W9AYu/CPEWtxrg82lYM6xBygnlPLt6Y7DXcJfFxA67H6+k9jHSsP/Ck2gbYUhsvbB31Bco/QjMbg+vSw8MvutwBW1AELJMZBIYFZy0SdXUHruQFGt010CmcPc1CSIzH2FFoU0EBSpUopWww5Xa6BXQtBsKQ2KUUQLXdNL5DQFFcopWmFaK0ZobXCKcRXKZMVoGVppjtRSKYVphWgZihsaKy0xloisCwoTCpDLTGWmEaI7ChsKkMtDZaaitEZlobLUplobLTUVojaa5R9NKtQQ6i0ZBTFFGQUrYyRn/afiglu6SSIQW//ACwf/c/SsVb4q0JnREmCGMhc8vKDnIz6Vde2nFMLaKBq8y4X09wJgHBxzDp0rP2rTMpi2uFlBloJO2wgdflSZV7L9I0Hsk6O7aRq05BIeVBwBLb7GTWwBrPeyVkC2xaAxaIA04UYwCepNaEClnZn6Mz4rcBucQ+rZLdonm5ZOoEaciGG/r2mK6wDpc3DpVF1LcU+8XHlhlCiGIJnUsdMUTxF3jWLYJa47tJ3QQF0xkQZznrjpQeBcMrm2dBZkGi4OUtzM2kAwxOkZWGxVPSEDhCA7kgcoCXlySCy7hcHYgkfMUXhX0ozNolmwRAV4VvfaCFEsM7fCo9khUMTbZ3JIaGDlFMhZjcuu8H4xUpE0W1UaVLamK7qdULpJxnlPr8cyoxZW+GdAhtgFNQDJEAHUSWX1yMZBH1EvwMa7hclTsZIi4RpY6XHQqSPiD13qusuy3NKsQAn+GMGVSPwzgFZHX4wN6vfAACzEGcNusHdQJPUgYnr3O9IxkaHh1hR8z9zRa6iQo+ArsUtDDkV0CuxXQtBsZIQWnha6BTgKRsdIQWlFdpRSjDStMIp1y4F3qt4nxBgZRQV6yM75iDRQGTStNIqs4jxwCCLbRuZAyBvGahv7REOALbw2AOQgHGSwP8AzNUQjL6K4RWYXxS5xALablnSdMFo1QAdWCR1j5VGfx7iLiK1tFZIDq4cjXy9QqgGZ22wKZCM1xWhXCFEsQB3JgfU1k+I8S4tijarKFciQTGoEEEahODVZxfivGs6I922yMwD6V3GqOUq0D5zTg6N1bdXEowYTEqQRPaRTEdWnSwaDpMEGCNwY2NYLxLi7lorbS69tWDksDyqV05bc52wD8qrU4oaZPG3CTklVeGeBOyCevrWBD0riLqoVDGCxgYJEyBkgQNxvTL15FEs6jE7ivNgUYANd4hmPZboB79R1/SoXGcNbCNLX9jJOsH3w2Mk7CMetEWHoNvx22X0tyCJ1FlI6YxP60ziPHuHRlBuppIJLaxywCciJziPjWP8IRW4cBNUQ6jWDq3O+rNVvD25QN5a3SY1OCAJB04ABPT1poCI27+1fBT/AI6felWNbg7rQRwqxEe/c6f7a5RB4o9TVa5xL6bbn/KY+JwPuaIBUPxd4RVmNTD6Ln9YpG+jZXZ537W8Qh4hE1MgRBsGks2Y5c7aarrxVwTLwDkc+JwBL9oj603jeNuPxF5ljS7ldRJyFwogHblrs3WPuIJ/ND5OI3b9RRS6K033s7a8uwihYBBbfPMScgY696ncfxIt2nf+VGP2x96BwIAQBTMAA5/ttUX2hcmwyL7zlUEb8xAxS5QmmZnjryzaVnY6EBDZhS/MwBADD3hBAjvsacxJtqbihwfMJdSuwCKCscrmS3Y4703j2L3LhGhlVgvljmCRyNLLzIcTBBGTimPpUAKxQhEGT+GZZnySNLGH/MBmqMCJLcQERFbnXQZLTrGtxbAacqpAO8zpIHSpjOQy21KldKgqdhjXvnV7w7gSNqgeIMSyK2oQFCFe5TUxA95RJOxM0Z3m4TIhHYyPy6IEAbM0IOxxSwYsE4rUXIJIgHQcOAzgmCThYOM+kipXh3i1y2OVgZAzcGmcmSu3p9J6yalHby3mWhlyPfXDQW2lsDsc7mioulUggNOrTcJAmBzJEduoxSsZGo4fx+/cuKnmWYIYkLBaBgFRJxOCaZZ4m4s6bjJlhASSQrEAyARkZ756ZqJ4Td13ifMttFsTpWGEtIJzhY9PWpHDuQoBZ05dRTRrKz3aDqzPX9KRjFx4RxDW7a6iXUySSIIknIGPpV/bIIBGxEiqWwk21zMqDJEEyJk1K4rxjh+H0pcuKrBRyiS0RgkDb50No2K2Wgroqjb2n4bTqt3A5mNImfjVvwvELcRbiGVYSOnpUmVgakadVcOILeYD+UwPkYoBO8VfXYsKreJthrZwGB7EQc95qP4s5HMNutZvh/GPLuqhLaHIUgE+8SNJX1mPlNFMV9GjYAAzcbA6KeX1wKiOZZYuXInIhobtORFGu8RcGvmtjHLld4/N6TUcXySNV1M7gacnERy7b/anQpH9niptvpe4/PvcDA+6MLqAx8PWq1UUhBct63ZZldPl4ABjVJjbfM1aeAXtav8Ajrdh4lQoC4906T+tVfD8TbRERi9owQLaamAgnYoIOM471QU4OEXQ2nhdxmWEtM+7y4+UdKq+M4WHsn+F2cEEskoAbeRqAmPTtvVgnFWCHm7dbSASfxBpmY6/uKq/E7tkLbYPfC6iV0+Zze4Rq0zIx1gb0c+xWH9orjpcs6MsS4VDMOSuA0fCdxQHPHRAThk7jECR6vvVx4/w+rRhSNbBpmdLI6nR01Z64rN2eGseW6i3dKa9BzakOWCSpjUM+sbmn+BSQl3ixpk2dJJ1kC3Kidxz5703iHvHUGv240vpHJIhSVkffB6Vx7aMVK27hKED30weVtTALE4Gfj3pi2gtxwbDMXChmZywOw1DljGrO3WiAk+z7k22DXEchzJSIGFMHSTmqXTC6Q7WAlxl0iSHUNJ93YkE+tT/AGYcc6iz5QlTEqZkETy/CgNbPm3gn4jq+ooxY6dQBEAY+tNAemMvjhpzevA9vxK7UtjxAiEtmRJlTIJ3FKhA09SArO+1XFBJJUtotlukAmTmf9K/WpPsf4ib3DgOee2dDyc490n5CPiDWV9ueKJFyHHPc0aRuNMLvP8Ak7dak/obKMtwd2EOkAsTpJJPKWgABTiZBg+tTeF8KY3FuOAecbwDKGNgO4qtRBgkgZJI5jBUSDHcmpPhVx/MltIAHTOTtmSNqdT6C79npHCk6ROKqvH7i+ZZRzpGovqySAo6CpvAv+Gk5kA/XNUntBxDeY+wC2YDGeUu2mZ6dKZIj7ZQK6HLBkcsTqksSx3515gTvt86tOIuPJHK66yv+nSAqyyyCd5kT8KgcKjsyatLoSAWI1DfMOhk/wC6akWDLI7IUJJaR6HU0suT8CKzHJDp+MI1AFySsCGUMBIHugYORnNd4a60lnUSF95dxrwAIyct2NR7RYFjq1DQ2+CZRoErgbjcTmlwvLqjlBxnbYmFzpA5d8Hf0pBixZwUXmJlm0suIjQSJHLnM5GNhUngwRjXHvEKV16ASY0mPdqFMhFOTAwCVnJkZM6en5pqZw1u4pP5IUaQV1lZ/mOnI22oGLfwu6T551q+lQNKroIYIZBM9T6CK63Fokp5xQqo5AklcGDJWWwPsTND4B9dm9zC6GdlheSBygqTO4k5xQ1vy0G5Eui/4eQSQACSnX1pddBRr+Iu+XbnqAANt9h/f5VhvF+ES2NS2yzOSWdpfJ6ktJk1fe2ah7a2xda2wlzp3I90T6b1C4Hg2PDFOZyUImc5HSufk03qI7uDj/RX8me4Hi2gKFQnb3FGe0gb+h+tbn2T8bZlW1cHcK3z90g7RWR4Twzy7YN5ufOqYkdFAPU5H0qd4Xxeu8ipGrWkx1bBY/IfpQ8r6M8RdnptUF0sty6GO+orB6EBhPY71fVmPaK3o4mw8wrhrZ297SYPzB//AJFElmETjL4Ftgx+E/pWd8XZA9hRAV79o7ZVZDH9NvU96quP8ZYMVLSqYBO5g4J+VS+G4wrYF2FLWyzpqmJAIGqCD171NJppsvPJNL6NhxrOUceWrcphQTzyMruI7ZoA1n8qKJzMg9Pd5vl8qqPB/F7HEpAUa2EPbLqGkA5tiJYRmRtR14e2jKNDkjVGpkMain+XMYA+ddSRwvol+Bi4A/mIi8w06CcjOWkDNUqOdCeWJALAm55YcAuwYg3OY7doiIqd7MIi+dosvb5xOv8AOebI5j/SoKPBTUBeLO6K66QqQ7+8FBiMAmTldhTwWgEBOsMbOkAaOSzzaZ06s9MdqicTcvG2Iu2UYHJhWWOaAIKxgDeetTOKby1ZvJYAHJRmLPkLEKhLD+gNU98o1oqOCchWTSrnur5XzABjbHenQtNF7QIGt2z5esrdtsI/KcjX8pql/iG0v/3onGkhjC99XLn7VceK3P8At1Yv5cG2SeXHMvLJxmYqlvXCgdV4cGSZGi+dR2OY9PhRgEwPD8STKvxepjldJcNpAidJWTmu8TdUQ3nOoBBz5hEAgwcDtStM5bzk4WHAIWRdGCYIAJj12rnG3rzKEPDh1IJI0uYIiAc53/Wj4gvZWezVw/xNxPMZ4BnUZ06Wj+tSPGEHm3C5KLCPrUEtgFTIBBA3zRPD7jfxLg2wgIfOrJyGysSPrTvFo87BlmskBGDMjaWknTtPzmmgG+yBw3CWyoPnXW7Hy32/8qVH4FLxTKWkIJGnyxiD8eu9KhGH/pE43hBcTSuGgwTMEj4ScmRt1FF41Az2LQJIGXadDPpAEsd5gHMHrQ1cc5WfeCb9fzEfKmNfC3b7AnkthQZ6tBjPqT9Kltvtr7gM6aTQJNNu5rZX0IQdLuWDZMaiFHKwjpmijjRcCLpSQNMqDzlju2I6wOwqoPEgkk6pIg5Bkds9NvpU/wAGtauIsqMKXBjtp5z+lPlFNNI9MTAAHQAfSsl4ncDvdZTqLXFTSW0AhBkliIwwFaS/eW2pdnAA74z0FYn/AKshgByh1MWI5tWogxnBG29UahHPZItIouM0FGCke73GkaTbJn3hnFE4dzqbKlVQwQQ5DwF5isESSdyYxUG14mqyZGqVghdJEENIKmNwNhTDxty+wt20Lu7AAYYk4jMA/lG+0fGlbRSMv0Fy6TbQ62YhAFjU0MvMTAIWE+lbnwTw5OGRUBDOx57h67So/wAon7VXeCeHjhU0lg15hzvMhR/KknYfehe1HHLbtC2rgPdBSS0aUM629CcKPnSMydKHxji0uXrj20OjVhVBAIKiIHUxnbec0HiPGAeW1yTB2E8uYJgE9f2apr97mKgkgYE5A7GJIA+lRB1z33gbUr/YeX2egeF8ULnDLJ1nWpaOWIbUCe8aQSMzVhwjBriEXJJdRPl7qDOidPxzNZHwJigViw0sTiTI0qeYjYjJEH0PrWj8F4pnuW9Vy2TLEqoGQoaNPwxPzowT5Lb204bXZS5Ok27gOoaZAYMu7epGPtiq7g/GFt21htWIxuT1wK0XFcBa4pDZvLqRskSRBAMEEbEVR8V7N8Jwtsm2GV10lGZyxYzBXTMRA3jf0FTWV5VnbwckzCV5acQha6uliCEaOZZG9QfY/wAEezxWq4yaUUaGmNUrokA9STn/AIo7+IoqB7jBR09fgOtUXG+Jm8QQIQe6DufVu2376rt38l+RJI9cBrL+2XH2LflLdeDqDqi5ckMukgDYb5MDcZ2rKcH4pdTC3nUDGlYCiPSPuaz/ALX22djxOoliQHkkx0VlnYbDT0JEY2XKpywZx/hyNxN1AzcrkgEg4JmcAUP2h8RXSLNs4Hvn1H5fWqe9x9y5ca5MM0zGIkQY+VAvcOy75wDR/wDP9VbKrczEBd4yDkbH4bRVrwPtZxdoibr3FnK3HYzkkw06gcnr8jVM4PWgM1VhFnr3snxa3Fd1us+rQxVtM2518vKB1BHyqq4wuCIu/wAPzsFRVdlcm4+SUgSwzESD1NUHsB455N7yXPJdIAJ/K+y/Jvd+JX1rUomvV5ZVwtxzNwMSHDtIUmMA7dOxp0qc+v0sg6Wlovu2IjReIWN4gg7+tQLt1PJJPFuIYAvDjmBcEcwI6xAHSr5HvTB8sDP5TMz21VT8S10I6+TbEOSscoaSrFpzElmx3WmSEpacZcnggygXPw7ZGoga405Jj57VV3xb1vzXpIYEabhVTj3YPT+tT7zTwRLHR+FLFCeSBnSQJxFVj8dd1hVthkK6lcIzTPfbcdf0poBMgMlsJpN+6GhoJS5vqBBjUJgYj1pEWvLGq7c1HCt5bgTMfz56damK964wZrSagTujGIAgzPXb5VH13E/DHDjTqM8jaepkZzJA+taGv8oFUW3xiobz6hC6CzEf4fbI9d96neLk67RiVhwxnI5cQOvXtVdf4i556M1sAllLEnSffKk6SJ2zv1qx8aIAtsXKgXF6wGkEaT3+FMkZvtFabnDgkfi/Ao8jA/5+dKg/xd87cMY/0Pmczt60qH89B/nsVqzp0qLgchiW/LLAkbncR1jNQOOtuiXJ5md1YlZICmSPvitR4M1p0HmFVLBg7yVHO2tg+nGCNjtGKgP4ghdyVUan0qEUxCKFSAemPjNeWuXS/FLvjzF+/ZmOFUnUWBgI7A5yQIUf+RFF4biXQhsqRkHIInaD0xV7/FqqarilQ5GCDz9ZEjrj6A1PV7dySrLEc8oSIBgCSCAMt8ZFU/u9J/4heDM8f4jduCHuO6juTE9461B1VsxwVrzDbCAswBkEwJBj4E+gxRbfszbGbq6VUlj+JKxieoIwBTL+qWn6YPCGQ4W21xgiKXZjCqNyf3mTtXofs3wlvhULLz3Tys42HdLXcdC/U+gzS2LFoM44e2URoDXCWLaJ9SdIJ6ddzsAus8F4IuJZYTAWCcqIiPT9a6U0l5MnqtxEzhrgVDeukLbQFv8AURv8QO/wFeZeK+MPxF57rfmMBf5UHur8v1Jra+1XiNm668GbgUagHAOmDgopMEBRifUgxiKpuK9kUEhbuliBpDxkiVYY66hHYHuInn1zpO6Gzn/VFRwXEK3JpJYZEHEKJOBBOAcTnarO74W2kMLamSwwH6R2ffeahP7N31yHQkZAV8/WMH0JBwat+EtXrdsfigujhgQQ0ww3nc+nyzJkP+oSaSaYXiAEsPqXURbCgDZgOgyMk5+NanwtX80E6CAGyN5MRGcggkzHasrc4mWJY5JJPxJzXb3D3Dpu2rbs0aW0sVJgGGjqNIAx1A7zV9aS7YkpuF8dtq0I6s0ZEmQIkmNxpxM9z2NZfxrxF7ueuoAeiienxA+c1Xnilt2BqtMnEOzBmLNLI3dScbCMTiaiNdZfdMR36d5mlWor8lOP0duuRl21uTgE4nc/BRvUnhAWO+NpJ3JAJgf07RUThuBvXSbgtsQcKTgae+e/pW28N4VLKAKMxloyx6kn+lQ3tI68cetFMFYARjoJBE/CYH61G8RVntOpH5T1BkjmAx6qK1PG3+QgwVIMg7EetYvg+ODF7ZyUciSclc6Z7npS8e/I3JxePyU2lVRSoySZJ+W1J3lfh+lRw82/gR9xTEuferwkButUVqPdqMzU6FG6vWPUYI+Feg8B4rbvWke8FZ214WARpOWYM0+p6ZFedsav/ZjjGRjbYLoeWl01AEDP5TEqI+Qp8+4T5FVfo1HkoX1IHxII0KynM/zY+VQeNtW0tPLuvXUVZSAbimAQTgbAAbVKbjCEIS5YBnYWyAJGTlYnf6VH4virly3EIZABPlviCMSiyBIPSreBzeTLHgnD8FyEuPLuAFieaC4yTnpVYl62SocPrCrqChyASgMYOaNwfiKW+HFq4Tri4IRHxqLEEalB61VW+Pa2GBUEJpXU2oF4EAsSMmtDJPsMWsEgLcuCGyCjmcEFcER/8oN4WiOW44QHfTcn4E6o+1L+OBhls6jJnSX5SO5UYOaHe8ZAwbaEHPvP++lGI3ZE4xtOgi+cE/mKgw2qCGOd6v8Ax1vwSwXVDKQJA/MBOfjUHwjxuyiupslSW1QOYEkZMu2NqN4/xP4apbIGo5wplSupSO04Oe9FJRm1ak0VnF8ONbf9yEz7ut8em1cqG9+SZtKSCQTlZIOSRq3pUvQ3Zrb1lLYOp7pAXAhtI0j+YKI+tB8H4a15am5bIbSJYyAdRLCJj9x3rTXOEDgq6gg4IzBH1miJwewCAAYGYIHSOlebPo6qrWVNrhOFYn8JeUFdjEEAnuN6evgXCnItBT0iCBIjGcSKuf4UY5fqR/ao/HcVa4VNdwhZBCCTLNGAIUkjvAoR+kU80QuM08Nam3biMKWZYkyf5gT3ODicVQXbl2/l2XQsADWApI21Fj0rL8d4hd4i4WZiSSTGo6VG+JOAO/1oSOAQEkzhmHvN6L1A+5+1WxxJO/JLTv4NknGBTotp5r7lSwS2TjmdtyoOwwuBzdKmXle5B43jGROqWWFpFA/KvKz3N9o/vVFwHj1mwpCcMC3Qlyc93gfHAb0ntXeIeJ3OIuebdfU0QMABVGyoowoHYVZ9iZUJnF3eGFxdCObNvADR5jqDtq3QZMHcTtVjb8R4e8gFx7iNrICW2LucLBUBTI0wNhlPU1k3uljpXHf9962Ps/wdy3bBS1DOJL7CO7sf/UfQVHmeUq0W4+F70WieA3L2hRc0os8ruA7D/MVxPwxQuD9jeItOdHF2lWejGSJneIBqHxntPasnTJuv+Yr7o9J2+X3qMfbd2IC21RepMk/T/wC1z5W2v8ei+uPiy/ZtLXgVgnWTbW5Mk677LO+BAB70VPDLSvrN92/yogVZztLY+n96wp8ea4xPmSF3Csyz8JA/YqQvj6DHMPnP3FT2tv2h88fF9mh8R8As3bnml7vQmXWWI6nl+w7VK4fgbFvKos9zk/U7fKqG17RW496it4/aPb4zSvW/RfOOP2oXt2/2plx8TiPXb/msxe9okHujPdRmqa/41cY4ZiOxOPtRzx60Nrlxn5Lf2j8ab/DTBjfsO9VPhVrQrtqkkEmeuDUUAuxZtyZqTxMpbc9NJHrJER966s5WVEcHJyPWqVCHlInoKYr7Uy0+/wAKYr1eEg11qh3KkM0iotx81kY0Xs8ls50gt1JzHw7Va+P2dVlgsBhDDYe6QT9pHzqj9nRn4dauuPaVMQWIhZ2261y6q5VDuzHwu/TM8eNvKJk+sFe3oKLZ8euIoAPUkiO5n97VDPCshhtX+1SfodqE9kajBcfFB/eu/wAtI8rxy/aLDi/GGuJoYGN5Hx69+n0qs/iXXAZsepj9aleSumDdAxMFCInfr6UF9MRrz30mPhtRbb9syi6RZ8F4w1q2PL1LnzGOkcxBVSJYZ3ExtG9Vz+KSfdgSTE9zNHuxo06ljS6jOxbI6ZzHwqA3COxHu5GIMYG0TWbYEs+2E/iyxHKsbRiTH060fi+KDLbxnQVJ5Z5XcKJGdoquuWCDAzB7jtNHvWCEUmZ1MAInIVGG3fV9qybG8c9A2O3TG0H+mKVMh/5W+h/tSrBPYH8TXQXWCNRX57iZ2kfqKf4RxD3EN1kKajMSDiABtWE8O4xgCtudJaTBc4P80jLADen8f7TaLYt2kAfq5VCRiMASP1iBvXm5WnqQaG94rxaxaGq45TciVeTG+kRzfKvJ/E/ELnE3WuMxbJ0zjSknSI2UAfeahXr73G1OxYnqSTSBkdlHyE/1P1NdeMLJhzWsSrZ69FPp6n7VwXiOUjSes4J+J6D0/WkbvVcR+br/ALB+X9fWg3Ox/fzqjMkENynC+QKAsj1H72pNMTBid6AxJ4O4A6lydMyYzMAx960lzhON421bNpnvEl2dVcBbanSLavJChjDNHYip/sP7P2Sv8RxSlwZ0W9BZcYLPiCZ2X69I9D/6woEC057AhRt2GqdvSob2rUhk9SGB8E//AD++zp/FItu2pDMFbWzgESh0nl1CeYNjoK1nHexHA3IK2ihiD5badtveJE+sTVg3ihMxb04/nM+kgDH1pqeIXJ3BOcKGGNhvM/EYqb3pugaZk7nsK6qRatsSSYd3VjA2BVdKjr3PrVY/sZxiyZQkAkLMahs2wzgk740mt/cfUDqLEHBWRBMRkZA3/vTU8uRmJBEgrMYxgT1+1bzYZ17PJ/EbB4W41u4gLgDllgoHQkghmmJGR+gqSlxntrda2g1MyLpAURbCiQu/WJO5B603x4pf8SuK7lEN1UdwC5RECozAdYCk0LjONVtIVNARQi+XqCwuNXOJJYyxkZLGrpKL7F+Rl64Tg49AKH+4GTQxxX+YH0KwfqDRFuCP5f8Ab/Ws0EeA3WQOgAJP22pvE8cXtshQgxCk9cjJqJevj8s/EtP2BioxejnPywNj0sxu0fCnMAKDrppeqi9nHPrQm9aezUeyQ+lR7xOlh3Ecp+IoDIufBxoQH51YWH1MSen6n/ioLsFWOwqx4fhdCCTk8zehPT5Yrl48+W/I6ebXjjxOPQmUUV7Zn/igvbjrv/xXb5Hn+JH4iyGEEkD0+UUAo4IGCvfMn7VKIprfD+tGhhXXLbajCrBiT19Z74pvksNtIA2x9RVgaG3zoGIFyzvpAH12+VNRCNsHepbimGmMR9TdzXaJApUKafsQhcKyAckQY2HoD/UfWgg5wJP72q48M9n7t8gKJHUj3QOst1/cnrUjxrgOH4dGtkhr2MLJK7E6iMLjpLkyOm0VEVpnyY9T26D4kb/AfWmtqJznt2HwFJcURRNMA6iRufUmgvcJOKM64iY70AuB7v1/tQQx0mN6neEta81BdZktlgHZQGKqfzQ2GgwYjoYzFVoNERSxgCSTAHcnYVmY9vfw/wAlUUsjpplHQcrrjmA/LgidxHXNdJAjUYGrBOkSd5kRJ+fWsf7C8dcuW3s3CrpaMprGrSLhyoYkcpKTHxrVJeU7spEyIGRH1757CuTWY4PSVab5Cc+m+M5/WiI+qQV0mSJOBAGSN5GYnr96CzgSSEiJJOOVcnBMAAR6YzFZTx32kY8O38KzLKI5fOrQdSME1EkEQpLb56b0FmhNJ4l4/wANw8h7g1kToQgucDozQNjEx6VleM//AEVsixw6gYhrhBO495VA6SPe3M+lYAtJJOScknc+p71ya6M8eV7E8iRd4t2uNcY8zMzsYjmYktjpknFF/wCot2FQgaeFNViASv41jTrV4HqQfUn7VEXeK6+aEMEutk0NiaaHnc12aKMcY0zVXWoYrGHTUvw66qPqYGNgek0Cxw7OTHQSfQVe8J4ejW9O9T3tJRlePDbqJHhVoXbmrdUAaO5M6cdRirp3J6+n/NC9nOENu24ADvCByVA8u3J06NyWYjJ6BfquJLDKr1zuRsJwDMxQxF0ifJ5N3SGljqgH99evrQH+Pyj/AJoZ4qJnOcgAjHzNce+jdPvH1g1SkocYY6Z7rEfv1obgnYAmf79KT3wcYHTrGMb0J9LAggzGSGz/AH29KNDCJxvGKh06TO/b99fpSs3kdjpPyjeO1Nv8LbPcn1NRxw6rMD6mt2GIsCnp/SguB1P/ANqMjaf7Zj6Gus/+oR0kx6YpqLAvmL/Ov1pULzT/ADfb/wCVytTQ0/tP7XKuq1wYKAHS1wzMjBFsH3eo1QPQDesSQfixzJP1NcpVHCSXRVj4jJimh4z3pUqcAG5cJ3pgFKlWMOC4mrfhbISwLg/xLrFLf+VfdZvQ5jv1pUqXb6X5Dk9C8I4FOFtrbEhmywE8zHTEGYGIEwNulTOK49LKayxC6Y2ksW2jEFpH5tIxuKVKuf2wox/ifjVy8NA5U/lnJjYuRAPwGB6nNRPBmBVkYSqXNBHdL50x/wCUGlSp18lH8GcvWSrMh3VmU/FSQf0pFO5+01ylXQiI9U7U40qVYwNzTSP0pUqxhqmng0qVYwiacBFKlQZiX4VYa4+hfzcv3q7W23DhlkSrurTn3Cy4+YpUqjy+kV4W/J/ghD2iu2yfLIBIhsbgdDO/X61M4Txfzf8AFRQzTpZQYYjcMJ39aVKivSKttpp/VGcSjA5H37Y71ENwjqaVKqr0cYw3Dv8A2rnmtSpUTDTc/pTWalSomGA5pp70qVYwya5SpVgH/9k=);
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+p {
+  color: #f2f2f2;
+}
+
+body {
+  background-image: url(https://images.bfmtv.com/DoUD22bAlO0Pc76VzFiIMYXWCvY=/0x0:1600x900/1600x0/images/Gilles-Lellouche-dans-Bac-Nord-1071040.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
+
+/*Pour la partie Histoire Vraie*/
+body {
+  font: normal 16px/1.5 "Helvetica Neue", sans-serif;
+  background: black;
+  color: black;
+  overflow-x: hidden;
+  padding-bottom: 50px;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(20, 19, 19);
+
+  color: rgb(50, 50, 50);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 112.5%;
+  line-height: 1.6em;
+}
+
+.textehistoire {
+  font-family: 'candara';
+  font-size: 24px;
+  padding-right: 7%;
+  padding-left: 7%;
+}
+
+
+/* ================ La Timeline ================ */
+
+.timeline {
+  position: relative;
+  width: 660px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 1em 0;
+  list-style-type: none;
+}
+
+
+.timeline:before {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  content: ' ';
+  display: block;
+  width: 6px;
+  height: 100%;
+  margin-left: -3px;
+  background: rgb(80, 80, 80);
+  background: -moz-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(30, 87, 153, 1)), color-stop(100%, rgba(125, 185, 232, 1)));
+  background: -webkit-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+  background: -o-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+  background: -ms-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+  background: linear-gradient(to bottom, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+  /* Dégradé utilisé comme fond de la ligne de la timeline */
+  /* ... */
+  z-index: 5;
+}
+
+.timeline li {
+  padding: 1em 0;
+}
+
+.timeline li:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.direction-0 {
+  position: relative;
+  width: 300px;
+  float: left;
+
+}
+
+.direction-l {
+  position: relative;
+  width: 300px;
+  float: right;
+}
+
+.direction-2 {
+  position: relative;
+  width: 300px;
+  float: left;
+
+}
+
+
+.direction-3,
+.direction-l,
+.direction-r {
+  position: relative;
+  width: 300px;
+  float: right;
+
+}
+
+.direction-4 {
+  position: relative;
+  width: 300px;
+  float: left;
+
+}
+
+.direction-5 {
+  position: relative;
+  width: 300px;
+  float: left;
+
+}
+
+.direction-r {
+  position: relative;
+  width: 300px;
+  float: right;
+}
+
+.droite {
+  width: fit-content;
+}
+
+.flag-wrapper {
+  position: relative;
+  display: inline-block;
+
+  text-align: left;
+}
+
+.direction-l .flag-wrapper,
+.direction-r .flag-wrapper {
+  position: relative;
+  display: inline-block;
+  float: right;
+  width: 300px;
+  text-align: left;
+}
+
+.flag {
+  position: relative;
+  display: block;
+  background: rgb(248, 248, 248);
+  padding: 6px 10px;
+  border-radius: 5px;
+
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Styles pour les différentes directions des éléments de la timeline */
+
+.direction-0 .flag:before,
+.direction-2 .flag:before,
+.direction-4 .flag:before {
+  position: absolute;
+  top: 50%;
+  right: -276px;
+  content: ' ';
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin-top: 5px;
+  background: rgb(248, 245, 245);
+  border-radius: 10px;
+  border: 4px solid rgb white;
+  z-index: 6;
+}
+
+
+
+
+
+
+.direction-l .flag:before,
+.direction-3 .flag:before,
+.direction-r .flag:before {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  content: initial;
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin-top: -5px;
+  background: rgb(248, 245, 245);
+  border-radius: 10px;
+  border: 4px solid rgb white;
+  z-index: 6;
+  float: right
+}
+
+
+.direction-0 .flag:after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  margin-top: -8px;
+  border: solid transparent;
+  border-left-color: rgb(248, 248, 248);
+  border-width: 8px;
+  pointer-events: none;
+}
+
+
+
+
+.direction-2 .flag:after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  margin-top: -8px;
+  border: solid transparent;
+  border-left-color: rgb(248, 248, 248);
+  border-width: 8px;
+  pointer-events: none;
+}
+
+
+.direction-3 .flag:after,
+.direction-l .flag:after {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  margin-top: -8px;
+  border: solid transparent;
+  border-right-color: rgb(248, 248, 248);
+  border-width: 8px;
+  pointer-events: none;
+}
+
+
+.direction-4 .flag:after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  margin-top: -8px;
+  border: solid transparent;
+  border-left-color: rgb(248, 248, 248);
+  border-width: 8px;
+  pointer-events: none;
+}
+
+
+
+.direction-r .flag:after {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  margin-top: -8px;
+  border: solid transparent;
+  border-right-color: rgb(248, 248, 248);
+  border-width: 8px;
+  pointer-events: none;
+}
+
+.time-wrapper {
+  display: inline;
+
+  line-height: 1em;
+  font-size: 0.66666em;
+  color: rgb(250, 80, 80);
+  vertical-align: middle;
+}
+
+
+.time {
+  display: inline-block;
+  padding: 4px 6px;
+  background: rgb(248, 248, 248);
+}
+
+.desc {
+  margin: 1em 0.75em 0 0;
+  color: #fff;
+  font-size: 0.77777em;
+  font-style: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5em;
+}
+
+.direction-r .desc {
+  margin: 1em 0 0 0.75em;
+}
+
+/* ================ La Timeline Media ================ */
+
+@media screen and (max-width: 769px) and (min-width: 426px) {
+
+  .timeline {
+    width: 100%;
+    padding: 4em 0 1em 0;
+    /* Ajoute un espace supplémentaire au-dessus et en dessous de la timeline */
+  }
+}
+
+.timeline li {
+  padding: 2em 0;
+  /* Ajoute un espacement vertical entre les éléments de la timeline */
+}
+
+.direction-l,
+.direction-r {
+  float: none;
+  width: 100%;
+
+  text-align: center;
+  /* Centre les éléments de la timeline horizontalement */
+}
+
+
+
+.flag {
+  background: rgb(255, 255, 255);
+  z-index: 15;
+}
+
+
+
+
+
+.time-wrapper {
+  display: block;
+  position: relative;
+  margin: 4px 0 0 0;
+  z-index: 14;
+}
+
+.direction-l .time-wrapper {
+  float: none;
+  /* Annule la flottaison des éléments temporels pour les aligner au centre */
+}
+
+
+.desc {
+  position: relative;
+  margin: 1em 0 0 0;
+  padding: 1em;
+  background: rgba(245, 245, 245, 0.42);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.20);
+  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.20);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.20);
+
+  z-index: 15;
+}
+
+
+
+/*POUR LA PAGE SYNOPSIS*/
+
+body {
+  background-color: #262622;
+  /* Définit la couleur de fond du corps de la page */
+}
+
+
+
+.texte {
+  padding-left: 20%;
+  /* Ajoute un espacement à gauche du texte */
+  padding-right: 20%;
+  /* Ajoute un espacement à droite du texte */
+  font-family: 'candara';
+  /* Définit la police de caractères du texte */
+  font-size: 22px;
+  /* Définit la taille de police du texte */
+}
+
+.photo {
+  border-width: 5px;
+  /* Définit l'épaisseur de la bordure de la photo */
+  border-style: double;
+  /* Définit le style de la bordure de la photo */
+  border-color: #fff;
+  /* Définit la couleur de la bordure de la photo */
+  width: 36%;
+  /* Définit la largeur de la photo */
+  margin-left: 5cm;
+  /* Définit la marge à gauche de la photo */
+}
+
+
+.scooter {
+  border-width: 5px;
+  border-style: double;
+  border-color: #fff;
+  width: 36%;
+
+}
+
+/*POUR LA PAGE Récompenses*/
+
+.cesar {
+  margin-top: 3%;
+  margin-left: 2%;
+
+  float: left;
+  border-width: 5px;
+  border-style: double;
+  border-color: #fff;
+
+
+}
+
+.cesartel {
+  display: none;
+}
+
+.récompenses {
+  width: 30%;
+  margin-right: 7%;
+  margin-top: 2%;
+
+  font-family: 'candara';
+  font-size: 24px;
+
+  float: right;
+
+}
+
+
+.texteavis {
+  margin-top: 48%;
+
+}
+
+.slideshow {
+  margin-left: 25%;
+  margin-right: 25%;
+  border-width: 5px;
+  border-style: double;
+  border-color: #fff;
+
+}
+
+.w3-buttonw3-light-grey {
+  margin-left: 30%;
+
+}
+
+
+
+.nombre {
+  margin-left: auto;
+
+  text-align: center;
+
+}
+
+/*couleur ecriture pour les boutons*/
+.w3-buttondemo {
+  color: black;
+
+}
+
+/*couleur arriere des boutons pour le slideshow*/
+button {
+
+  background-color: #818181;
+}
+
+/*la couleurs des boutons changent de couleurs quand la souris passe au dessus*/
+
+button:hover {
+
+  background-color: #ebe5e5;
+}
+
+
+/*Pour la page Distribution*/
+
+.textedistribution {
+  font-family: 'candara';
+  font-size: 24px;
+  padding-right: 9%;
+  padding-left: 9%;
+}
+
+.pastel {
+  font-family: 'candara';
+  font-size: 24px;
+  padding-right: 9%;
+  padding-left: 9%;
+  color: #f2f2f2;
+}
+
+.parallax1 {
+  /*L'image utilisée */
+  background-image: url("../img/la\ table.jpg");
+
+  /*Définit une hauteur spécifique*/
+  min-height: 500px;
+
+  /* Crée l'effet de défilement parallaxe  */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.parallax2 {
+  /*L'image utilisée*/
+  background-image: url("../img/poteau.jpg");
+
+  /* Définit une hauteur spécifique */
+  min-height: 500px;
+
+  /* Crée l'effet de défilement parallaxe */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax3 {
+  /* L'image utilisée */
+  background-image: url("../img/para3.jpg");
+
+  /* Définit une hauteur spécifique */
+  min-height: 500px;
+
+  /* Crée l'effet de défilement parallaxe */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*POUR LA PAGE ACTEURS*/
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 225px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  border-width: 5px;
+  border-style: double;
+  border-color: #fff;
+}
+
+
+
+
+
+
+/* Style the back side */
+
+.image {
+
+  display: grid;
+  grid-template-columns: repeat(4, 24%);
+  grid-gap: 1em;
+  margin: 1em;
+
+}
+
+.texteacteurs {
+  position: relative;
+  font-family: 'candara';
+  font-size: 22px;
+  width: 100%;
+  text-align: left;
+
+}
+
+
+.flip-card-back {
+  background-color: gray;
+  color: #f2f2f2;
+  transform: rotateY(180deg);
+}
+
+.titreacteurs {
+  font-family: 'Anton';
+  text-align: center;
+  color: #f2f2f2;
+  letter-spacing: 2px;
+  font-size: 23px;
+  background-color: #000000;
+  width: 100%;
+  padding: 1%;
+  box-sizing: border-box;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.ensavoirplus {
+  color: #8C5C4A;
+}
+
+
+
+
+/*Pour la page contact*/
+
+
+.form {
+
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+
+.Contact {
+  background-color: #787874;
+  font-family: 'candara';
+  color: #333;
+  padding-top: 2em;
+  border-width: 5px;
+  border-style: double;
+  border-color: #fff;
+
+}
+
+.nom {
+
+  width: fit-content;
+  background-color: #444;
+  color: #fff;
+
+  padding-left: 1em;
+
+
+}
+
+.com {
+  text-align: left;
+  color: #f2f2f2;
+  width: fit-content;
+  margin-left: 6em;
+
+}
+
+.form-group {
+  margin-bottom: 20px;
+
+
+}
+
+.formulaire {
+  text-align: left;
+  border-width: 2px;
+  border-style: double;
+  border-color: #262622;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto
+}
+
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 1em;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+input[type="submit"] {
+  background-color: #444;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #222;
+}
+
+
+/*Pour la page Quiz*/
+
+/*La taille des propositions de réponse au Quizz sont de taille 1.5em*/
+label {
+  font-size: 1.3em;
+}
+
+/*On place la div à droite avec une marge exterieure gauche de 2em*/
+.shin {
+  float: right;
+  margin-right: 2em;
+  width: auto;
+}
+
+/*on centre le contenu de la div au milieu avec un contour */
+.quiz {
+  border-width: 4px;
+  border-style: double;
+  border-color: #ffffff;
+  padding-left: 2em;
+  width: 60%;
+  margin-left: 16em;
+  background-color: #bbb;
+}
+
+/* on fait ressortir les numéro de questions*/
+h2 {
+  width: fit-content;
+  color: #f2f2f2;
+  background-color: #444;
+  font-family: 'candara';
+  padding: 0.2em;
+}
+
+/*On a choisit la police Anton pour les questions*/
+.question {
+  color: #0b0D00;
+  font-size: 25px;
+  font-family: 'Anton';
+
+}
+
+/*les réponses seront plus discrètes avec une simple police candara*/
+.réponses {
+  font-size: 16px;
+  font-family: candara;
+}
+
+
+.tout {
+
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+
+  grid-gap: 3em;
+  padding-left: 20%;
+  color: #f2f2f2;
+  font-family: 'candara';
+
+  justify-content: center;
+  align-items: center;
+
+}
+
+.sources {
+  color: #8C5C4A;
+  padding: auto;
+}
+
+.sourcetitre {
+  margin: 2em;
+}
+
+
+
+/*Pour la page musique*/
+#musique iframe,
+.musique iframe {
+  width: 90%;
+  height: 20em;
+  border-width: 5px;
+  border-style: double;
+  border-color: #fff;
+}
+
+/*On affiche ces vidéos sous forme de grille de 2 colonnes chacune occupant 50%, l'écart entre les vidéos est de 3em*/
+#musique,
+.musique {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-gap: 3em;
+  padding: 2em;
+}
+
+/*Le menu burger*/
+
+/*Le contenu du menu burger s'affiche en ligne*/
+#hamburger,
+#hamburger-content {
+  display: inline;
+}
+
+/*Le bouton du menu flotte à gauche (pas affiché en version Desktop), prend en tout 15% de largeur, a une taille de 4em, et est aligné sur le haut, une transition durera 0.5 secondes lorsque l'on cliquera dessus*/
+#hamburger-button {
+  background: none;
+  border: none;
+  font-size: 4em;
+  padding: 0;
+  vertical-align: top;
+  line-height: 47px;
+  float: left;
+  width: 15%;
+  display: none;
+  transition: background 0.5s;
+}
+
+/*Lorsque l'on clique sur le bouton la div "hamburger" obtient cette div, elle se deplace alors de 20px sur la droite*/
+#hamburger-button .activatedClass {
+  transform: translateX(-20px; );
+}
+
+/*Un masque noir d'opacité 0.4 est placé sur la page lorsque l'on appuie sur le bouton burger, dans la version Desktop il n'est pas affiché*/
+#hamburger-overlay {
+  position: fixed;
+  z-index: 10;
+  top: 6.15em;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+/*La sidebar est le conteneur contenant tout le menu, il est situé tout à gauche de l'écran on ne peut pas le voir*/
+#hamburger-sidebar {
+  display: none;
+  position: fixed;
+  width: 50%;
+  z-index: 20;
+  height: 100%;
+  top: 6.17em;
+  left: 0;
+  border-top: solid;
+  border-bottom: solid;
+  background-color: #DCDDDE;
+  transform: translateX(-100%);
+  transition: transform .2s ease-out;
+}
+
+/*Le menu sera affiché en bloc*/
+#hamburger-sidebar li {
+  display: block;
+  float: none;
+}
+
+/*Marge interieur de 1em en haut et 0.5em à droite*/
+#hamburger-sidebar-body {
+  padding: 16px 8px;
+}
+
+/*La page active change de couleur de fond*/
+.menu li .active {
+  background: #414655;
+  color: white;
+  font-weight: bold;
+}
+
+#cont {
+  float: left;
+}
+
+#tete {
+  float: right;
+  width: 50%;
+}
+
+/*Animation de soulignement lors d'un survol d'une catégorie, celle-ci dure 0.6 secondes*/
+.underline {
+  position: relative;
+}
+
+.underline::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 3px;
+  background-color: #B0D7FF;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Partie responsive tablette*/
+
+@media screen and (max-width: 768px) and (min-width: 426px) {
+
+  /*Sur tablette la section prend toute la largeur de l'écran*/
+  .logo {
+    width: 100%;
+  }
+
+
+  /*On n'affiche pas le contenu du menu tant que la class hamburger-activated n'existe pas*/
+  #hamburger-content {
+    display: none;
+  }
+
+  .navbar,
+  .navbar a {
+    color: #0b0D00;
+    width: 100%;
+  }
+
+  .dropdown {
+    display: block;
+    float: none;
+    width: 100%;
+
+  }
+
+
+  .dropdown-content {
+    width: 50%;
+  }
+
+  /*L'overlay et la sidebar sont affichés lorsque l'on clique sur le bouton*/
+  #hamburger-button,
+  .hamburger-activated #hamburger-overlay {
+    display: block;
+    float: left;
+    width: 100%;
+    position: absolute;
+    color: #f2f2f2;
+    height: auto;
+    margin-top: 0.3em;
+
+  }
+
+
+
+
+  #hamburger-sidebar {
+    width: 70%;
+    height: 70%;
+    display: block;
+    overflow-y: scroll;
+  }
+
+  /*La div Navigation fera 10% de largeur pour tenir sur la même ligne que le logo*/
+  .Navigation {
+    width: 10%;
+    float: left;
+    position: absolute;
+    top: 0;
+    margin-left: 1em;
+  }
+
+  /*On faut apparaitre la sidebar lorsque la class hamburger-activated existe*/
+  .hamburger-activated #hamburger-sidebar {
+    transform: translateX(0);
+    width: 100%;
+
+  }
+
+  /*Les catégories des menus prennent toute la largeur de la sidebar*/
+  .menu li {
+    float: left;
+    width: 100%;
+    position: relative;
+  }
+
+  /*On affiche directement les sous-menus*/
+  ul.sous {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    z-index: 20;
+    position: relative;
+    margin-bottom: 1em;
+  }
+
+  /*Les sous-menus sont d'une couleur différente pour les différencier des catégories */
+  .sous a {
+    background: #444;
+    color: black;
+    ;
+    width: 100%;
+    display: block;
+  }
+
+  .menu {
+    vertical-align: middle;
+  }
+
+  .menu .sousact {
+    background-color: #9d9d9d;
+    color: white;
+  }
+
+  /*L'écran étant plus petit on agrandit la taille des catégories et de la police*/
+  .Navigation a {
+    height: 3em;
+    font-size: 2em;
+  }
+
+  .menu li:hover ul {
+    top: 0px;
+  }
+
+  /*L'accueil est un peu plus éloigné du reste car il s'agit de la page principale*/
+  .acc {
+    margin-bottom: 1em;
+  }
+
+
+
+
+  /*le titre pour le format tablette*/
+  h1 {
+    font-family: 'Anton';
+    text-align: center;
+    color: #f2f2f2;
+    letter-spacing: 1px;
+    font-size: 30px;
+    background-color: #000000;
+    width: fit-content;
+    padding: 1%;
+    box-sizing: border-box;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 2px;
+    border-style: double;
+    border-color: #fff;
+
+  }
+
+  /*Pour la page d'accueil*/
+  /*Pour que le txte d'accueil soit bien centré et conforme au format*/
+  .texteaccueil {
+
+    color: #f2f2f2;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'candara';
+    text-align: center;
+    font-size: 24px;
+    padding: 1em;
+  }
+
+
+  /*Pour la page synopsis*/
+  /*changement de taille au niveau du padding et de la taille de la police*/
+  .texte {
+    padding-left: 10%;
+    padding-right: 10%;
+    font-family: 'candara';
+    font-size: 20px;
+  }
+
+  .photo {
+    border-width: 5px;
+    border-style: double;
+    border-color: #fff;
+    width: 70%;
+    margin-left: 5em;
+    margin-right: auto;
+  }
+
+  .scooter {
+    border-width: 5px;
+    border-style: double;
+    border-color: #fff;
+    width: 70%;
+    margin-left: 5em;
+    margin-right: auto;
+
+  }
+
+
+  /*POUR LA PAGE ACTEURS*/
+
+
+  .image {
+
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-row-gap: 6em;
+  }
+
+  .texteacteurs {
+    width: 100%;
+    margin-left: 0.5em;
+    margin-right: 0.5;
+
+  }
+
+
+
+
+  /*Pour la page histoire vraie*/
+
+  .textehistoire {
+    font-family: 'candara';
+    font-size: 20px;
+    padding-right: 7%;
+    padding-left: 7%;
+  }
+
+
+  .timeline {
+    width: 100%;
+    padding: 4em 0 1em 0;
+  }
+
+  .timeline li {
+    padding: 2em 0;
+  }
+
+  .direction-l,
+  .direction-r {
+    float: right;
+    width: 100%;
+    text-align: left;
+  }
+
+  .droite {
+    float: right;
+  }
+
+  .adroite {
+    float: right;
+  }
+
+  .flag-wrapper {
+    text-align: center;
+  }
+
+  .flag {
+    background: rgb(255, 255, 255);
+    z-index: 15;
+  }
+
+  .time-wrapper {
+    display: block;
+    position: relative;
+    margin: 4px 0 0 0;
+    z-index: 14;
+  }
+
+  .direction-l .time-wrapper {
+    float: none;
+  }
+
+  .direction-0 .flag:before,
+  .direction-2 .flag:before,
+  .direction-4 .flag:before {
+    position: absolute;
+    top: 50%;
+    left: 225px;
+
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin-top: 5px;
+    background: rgb(248, 245, 245);
+    border-radius: 10px;
+    border: 4px solid rgb white;
+    z-index: 6;
+  }
+
+  .desc {
+    position: initial;
+    margin: 1em 0 0 0;
+    padding: 1em;
+    background: rgb(110, 109, 109);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.20);
+    float: initial;
+    width: 40%;
+  }
+
+
+  /*Pour la page distribution*/
+
+  .textedistribution {
+    font-family: 'candara';
+    font-size: 20px;
+    padding-right: 9%;
+    padding-left: 9%;
+  }
+
+  /*changement d'image pour le paralxe au format tablette*/
+  .parallax1 {
+    /* The image used */
+    background-image: url("../img/PHOTO.jpg");
+  }
+
+  .direction-0,
+  .direction-2,
+  .direction-4 {
+    position: relative;
+    width: 450px;
+    margin-left: 20%;
+
+  }
+
+  .direction-l {
+    position: relative;
+    width: 300px;
+    float: right;
+  }
+
+  .direction-l .droite,
+  .direction-3 .droite,
+  .direction-5 .droite,
+  .direction-r .droite {
+    position: relative;
+    width: fit-content;
+    float: left;
+  }
+
+  .direction-2 {
+    position: relative;
+    width: 300px;
+    float: left;
+
+  }
+
+
+  .direction-3,
+  .direction-l {
+    position: relative;
+    width: 300px;
+    float: right;
+
+  }
+
+  .direction-4 {
+    position: relative;
+    width: 300px;
+    float: left;
+
+  }
+
+  .direction-5 {
+    position: relative;
+    width: 300px;
+    float: left;
+
+  }
+
+  .direction-r {
+    position: relative;
+    width: 300px;
+    float: right;
+  }
+
+  /*POUR LA PAGE Récompenses*/
+
+  .cesar {
+    margin-top: 3%;
+    margin-left: 0.5;
+    margin-right: 0.5;
+    border-width: 5px;
+    border-style: double;
+    border-color: #fff;
+  }
+
+  .cesartel {
+    display: none;
+  }
+
+
+  .récompenses {
+    width: 90%;
+    margin-top: 2%;
+    font-family: 'candara';
+    font-size: 24px;
+
+
+  }
+
+  .texteavis {
+    margin-top: 120%;
+  }
+
+  .slideshow {
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 5px;
+    border-style: double;
+    border-color: #fff;
+
+  }
+
+
+  /*Pour la page Quiz*/
+  /*La taille des propositions de réponse au Quizz sont de taille 1.5em*/
+  /*On place la div de la musique soundcloud à droite avec une marge exterieure gauche de 2em*/
+  .shin {
+    float: right;
+    width: 30%;
+  }
+
+  /*on centre le contenu de la div au milieu avec un contour */
+  .quiz {
+    border-width: 4px;
+    border-style: double;
+    border-color: #ffffff;
+
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #bbb;
+  }
+
+
+  /* on fait ressortir les numéro de questions*/
+  h2 {
+    width: 30%;
+    color: #f2f2f2;
+    background-color: #444;
+    font-family: 'candara';
+    padding: 0.2em;
+  }
+
+  /*Pour la page contact*/
+
+  .form {
+
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .com {
+    text-align: left;
+    color: #f2f2f2;
+    width: 35%;
+    margin-left: 2em;
+
+  }
+
+  .nom {
+    width: 30%;
+    background-color: #444;
+    color: #fff;
+    padding: auto;
+    padding-left: 1em;
+  }
+
+
+
+  .form-group {
+    margin-bottom: 28px;
+  }
+
+  .formulaire {
+    text-align: left;
+    border-width: 2px;
+    border-style: double;
+    border-color: #262622;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*Partie Responsive smartphone*/
+@media only screen and (max-width:426px) {
+  .logo {
+    width: fit-content;
+
+
+  }
+
+  /*le titre pour le format smartphone*/
+  h1 {
+    font-family: 'Anton';
+    text-align: center;
+    color: #f2f2f2;
+    letter-spacing: 1px;
+    font-size: 23px;
+    background-color: #000000;
+    width: fit-content;
+    padding: 1%;
+    box-sizing: border-box;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 2px;
+    border-style: double;
+    border-color: #fff;
+
+  }
+
+
+  /*Pour la page d'accueil*/
+  /*Pour que le txte d'accueil soit bien centré et conforme au format*/
+  .texteaccueil {
+    font-family: 'candara';
+    text-align: center;
+    color: #f2f2f2;
+    margin-left: 1cm;
+    margin-right: 1cm;
+    
+    text-align: center;
+    font-size: 20px;
+  }
+
+
+  iframe {
+
+    width: 100%;
+  }
+
+  .bandeannonce {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    border-width: 5px;
+    border-style: double;
+    border-color: #fff;
+  }
+
+
+  /*Pour la page synopsis*/
+  /*changement de taille au niveau du padding et de la taille de la police*/
+  .texte {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-family: 'candara';
+    font-size: 20px;
+  }
+
+  .photo {
+    border-width: 5px;
+    border-style: double;
+    border-color: #fff;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .scooter {
+    border-width: 5px;
+    border-style: double;
+    border-color: #fff;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+
+  /*Pour la page histoire vraie*/
+
+  .textehistoire {
+    font-family: 'candara';
+    font-size: 18px;
+    padding-right: 7%;
+    padding-left: 7%;
+  }
+
+  .timeline {
+    width: 100%;
+    padding: 4em 0 1em 0;
+  }
+
+  .timeline li {
+    padding: 2em 0;
+  }
+
+  .direction-l,
+  .direction-r {
+    float: right;
+    width: 100%;
+    text-align: left;
+  }
+
+
+
+
+
+  .adroite .flag {
+    width: fit-content;
+  }
+
+  .adroite {
+    float: right;
+  }
+
+  .flag-wrapper .droite,
+  .flag-wrapper .desc {
+    text-align: left;
+    float: right;
+  }
+
+  .flag {
+    background: rgb(255, 255, 255);
+    z-index: 5;
+  }
+
+  .time-wrapper {
+    display: block;
+    position: relative;
+    margin: 4px 0 0 0;
+    z-index: 14;
+  }
+
+  .direction-l .time-wrapper {
+    float: none;
+  }
+
+  .direction-0 .flag:before,
+  .direction-2 .flag:before,
+  .direction-4 .flag:before {
+    position: absolute;
+    top: 50%;
+    right: -140px;
+    content: ' ';
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin-top: 5px;
+    background: rgb(248, 245, 245);
+    border-radius: 10px;
+    border: 4px solid rgb white;
+    z-index: 6;
+  }
+
+  .desc {
+    position: initial;
+    margin: 1em 0 0 0;
+    padding: 1em;
+    background: rgb(110, 109, 109);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.20);
+    float: initial;
+    width: 40%;
+  }
+
+  body {
+    margin: 1em;
+    padding: 0;
+    background: rgb(20, 19, 19);
+
+    color: rgb(50, 50, 50);
+    font-family: 'candara';
+    font-size: 112.5%;
+    line-height: 1.6em;
+  }
+
+  /*Les vidéos YouTubes précedement affichées en grille s'affichent en bloc*/
+  #musique,
+  .musique {
+    display: block;
+    text-align: center;
+
+  }
+
+  /*Chaque vidéo est espacée de 1em par rapport aux autres*/
+  #musique iframe,
+  .musique iframe {
+    margin-bottom: 1em;
+
+  }
+
+
+
+  /*Pour la page Quiz*/
+  /*La taille des propositions de réponse au Quizz sont de taille 1.5em*/
+  /*On place la div de la musique soundcloud à droite avec une marge exterieure gauche de 2em*/
+  .shin {
+    position: calc();
+    width: 30%;
+
+  }
+
+  /*on centre le contenu de la div au milieu avec un contour */
+  .quiz {
+    border-width: 4px;
+    border-style: double;
+    border-color: #ffffff;
+
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #bbb;
+  }
+
+
+  /* on fait ressortir les numéro de questions*/
+  h2 {
+    width: 55%;
+    color: #f2f2f2;
+    background-color: #444;
+    font-family: 'candara';
+    padding: 0.1em;
+  }
+
+
+  /*Pour la page contact*/
+
+  .com {
+    text-align: center;
+    color: #f2f2f2;
+    width: 55%;
+    margin-left: 2.5em;
+
+  }
+
+  .nom {
+    width: fit-content;
+    background-color: #444;
+    color: #fff;
+    padding: auto;
+
+  }
+
+  .form-group {
+    margin-bottom: 40px;
+  }
+
+
+  .formulaire {
+    text-align: left;
+    border-width: 2px;
+    border-style: double;
+    border-color: #262622;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+
+  /*Pour la page crédit*/
+
+  .tout {
+
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+
+    grid-gap: 3em;
+    padding-left: 20%;
+    color: #f2f2f2;
+    font-family: 'candara';
+
+    justify-content: center;
+    align-items: center;
+
+  }
+
+
+  /*On n'affiche pas le contenu du menu tant que la class hamburger-activated n'existe pas*/
+  #hamburger-content {
+    display: none;
+  }
+
+  .navbar,
+  .navbar a {
+    color: #0b0D00;
+    width: 100%;
+  }
+
+  .dropdown {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+
+
+  .dropdown-content {
+    width: 50%;
+  }
+
+  /*L'overlay et la sidebar sont affichés lorsque l'on clique sur le bouton*/
+  #hamburger-button,
+  .hamburger-activated #hamburger-overlay {
+    display: block;
+    float: left;
+    width: 100%;
+    position: absolute;
+    color: #f2f2f2;
+    height: auto;
+    margin-top: 0.3em;
+
+  }
+
+  #hamburger-button {
+    font-size: 40px;
+    display: block;
+    float: left;
+  }
+
+
+
+  #hamburger-sidebar {
+    width: 70%;
+    height: 70%;
+    display: block;
+    overflow-y: scroll;
+  }
+
+  /*La div Navigation fera 10% de largeur pour tenir sur la même ligne que le logo*/
+  .Navigation {
+    width: 10%;
+    float: left;
+    position: absolute;
+    top: 0;
+    margin-left: 1em;
+  }
+
+  /*On faut apparaitre la sidebar lorsque la class hamburger-activated existe*/
+  .hamburger-activated #hamburger-sidebar {
+    transform: translateY(0);
+    width: 100%;
+    height: 80%;
+    box-shadow: 0px -5px 5px 0px inset rgba(0, 0, 0, 0.4);
+
+  }
+
+  /*Les catégories des menus prennent toute la largeur de la sidebar*/
+  .menu li {
+    float: left;
+    width: 100%;
+    position: relative;
+  }
+
+  /*On affiche directement les sous-menus*/
+  ul.sous {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    z-index: 20;
+    position: relative;
+    margin-bottom: 1em;
+  }
+
+  /*Les sous-menus sont d'une couleur différente pour les différencier des catégories */
+  .sous a {
+    background: #444;
+    color: black;
+
+    width: 100%;
+    display: block;
+  }
+
+  .menu {
+    vertical-align: middle;
+  }
+
+  .menu .sousact {
+    background-color: #9d9d9d;
+    color: white;
+  }
+
+  /*L'écran étant plus petit on agrandit la taille des catégories et de la police*/
+  .Navigation a {
+    height: 3em;
+    font-size: 2em;
+  }
+
+  .menu li:hover ul {
+    top: 0px;
+  }
+
+  /*L'accueil est un peu plus éloigné du reste car il s'agit de la page principale*/
+  .acc {
+    margin-bottom: 1em;
+  }
+
+
+
+  /*Pour la page distribution*/
+
+  .textedistribution {
+    font-family: 'candara';
+    font-size: 20px;
+    padding-right: auto;
+    padding-left: auto;
+  }
+
+  .parallax3 {
+    display: none;
+  }
+
+  .parallax1 {
+    display: none;
+  }
+
+  .parallax2 {
+    display: none;
+  }
+
+  .pastel {
+    display: none;
+  }
+
+
+
+
+
+  /*POUR LA PAGE Récompenses*/
+
+  .cesartel {
+
+    margin-top: 3%;
+    margin-left: 2%;
+
+    float: left;
+    border-width: 5px;
+    border-style: double;
+    border-color: #fff;
+
+  }
+
+  .cesar img {
+    display: block;
+    width: 100%;
+  }
+
+
+  .récompenses {
+    width: 90%;
+    margin-top: 2%;
+    font-family: 'candara';
+    font-size: 24px;
+
+  }
+
+  .texteavis {
+    display: flex;
+    height: fit-content;
+  }
+
+  .slideshow {
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 5px;
+    border-style: double;
+    border-color: #fff;
+
+  }
+
+
+  .w3-buttonw3-light-grey {
+    margin-left: 24%;
+
+  }
+
+
+
+  /*POUR LA PAGE ACTEURS*/
+
+
+  .image {
+    align-content: center;
+    /* Centre le contenu de l'élément "image" horizontalement */
+    display: grid;
+    /* Utilise un affichage en grille pour les images */
+
+    grid-template-columns: repeat(1, 100%);
+    /* Crée une colonne unique avec une largeur de 100% */
+    grid-row-gap: 4em;
+    /* Définit l'espace vertical entre les lignes de la grille */
+    margin-left: 3em;
+    /* Définit la marge à gauche de l'élément "image" */
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

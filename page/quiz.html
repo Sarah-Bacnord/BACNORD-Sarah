@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Bac Nord, Action, Police">
+  <meta name="description" content="Site pour les fans du film BAC Nord ou les personnes s'y interessant">
+  <meta name="author" content="Sarah EL MCHANTEF">
+
+  <title>Quiz</title>
+  <!--On associe la page html à une feuille de style-->
+  <link rel="stylesheet" href="../style/style.css">
+  <!--On importe les favicons-->
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon 180x180.jpg">
+  <link rel="icon" type="image/jpg" sizes="32x32" href="../img/favicon 32x32.jpg">
+  <link rel="icon" type="image/jpg" sizes="16x16" href="../img/favicon 16x16.jpg">
+  <link rel="manifest" href="../img/favicon 16x16.jpg">
+</head>
+
+<body>
+  <div class="bacnord">
+    <h1>Quiz</h1>
+  </div>
+  <nav>
+
+    <div class="navbar">
+
+      <div id="brand">
+        <header>
+          <!-- On retrouve dans le header tout le menu ainsi que le logo-->
+          <a href="../index.html">
+            <div class="logo"><img src="../img/1062812_1600x450 (1).jpg" alt="logo_bacnord">
+          </a>
+      </div>
+      <!-- La div Navigation utilisée pour donner une couleur au background -->
+      <div class="Navigation">
+        <div id="hamburger">
+          <!--Div qui sert de "pointeur" pour remplir le #hamburger-sidebar -->
+          <div id="hamburger-content">
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a> Personnages</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="synopsis.html">Synopsis</a>
+                <a href="acteurs.html">Acteurs</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a> Contexte</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="histoire.html">Histoire Vraie</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="distribution.html"> Distribution</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="récompenses.html">Récompenses</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="musique.html">Musiques</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="quiz.html">Quiz</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="contacts.html">Contact</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="crédit.html">Crédit</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+
+
+          </div>
+        </div>
+        <!-- Le bouton du menu burger et sa forme-->
+        <button id="hamburger-button">&#9776;</button>
+        <!--L'endroit où apparaitra le menu et sous-menu lorsque l'on clique sur le bouton burger-->
+        <div id="hamburger-sidebar">
+          <div id="hamburger-sidebar-header"></div>
+          <div id="hamburger-sidebar-body"></div>
+        </div>
+
+        <!-- Un calque pour rendre le contenu de fond plus sombre-->
+        <div id="hamburger-overlay"></div>
+      </div>
+    </div>
+  </nav>
+  <br>
+
+  <!--On crée un formulaire-->
+  <form id="form1">
+    <div class="quiz">
+
+      <!--Cette div est utilisée pour mettre l'image à droite et le texte à gauche-->
+      <div class="boite2">
+        <h2>Question 1 :</h2>
+
+        <div class="question">Quel est le thème principal du film "BAC Nord" ?</div>
+        <br>
+        <!--On donne la valeur 0 aux mauvaises réponses-->
+        <div class="réponses">
+
+          <label for="var_string"><input type="radio" name="variable" value="0" id="var_string" /> La vie des lycéens
+            dans un quartier difficile</label>
+
+
+          <br>
+
+          <label for="var_join"><input type="radio" name="variable" value="1" id="var_join" />La corruption dans les
+            forces de police</label>
+
+
+          <br>
+          <!--La bonne réponse sera le premier bouton radio, il a la valeur 1-->
+          <label for="var_info"><input type="radio" name="variable" value="0" id="var_info" />L'amitié entre collègues
+            de travail</label>
+          <br>
+        </div>
+        <hr>
+      </div>
+      <br>
+
+      <!--Une autre question-->
+      <div class="boite2">
+        <h2>Question 2 :</h2>
+
+        <div class="question">"BAC Nord" est basé sur une histoire vraie ?</div>
+        <br>
+
+        <div class="réponses">
+          <label for="sub_string"><input type="radio" name="sub" value="1" id="sub_string" />Vrai</label>
+
+          <br>
+          <label for="sub_join"><input type="radio" name="sub" value="0" id="sub_join" />Faux</label>
+
+          <br>
+          <br>
+        </div>
+      </div>
+      <hr>
+
+      <div class="boite2">
+        <!--Une autre question-->
+        <h2>Question 3 :</h2>
+
+        <div class="question">Où se déroule l'intrigue principale du film ?</div>
+
+
+        <div class="réponses">
+          <label for="cat_string"><input type="radio" name="con" value="0" id="cat_string" />Paris </label>
+
+          <br>
+          <label for="cat_join"><input type="radio" name="con" value="1" id="cat_join" />Marseille </label>
+
+          <br>
+          <label for="cat_info"><input type="radio" name="con" value="0" id="cat_info" />Lyon </label>
+        </div>
+        <br><br>
+      </div>
+      <hr>
+      <!--Une autre question-->
+      <div class="boite2">
+        <h2>Question 4 :</h2>
+
+        <div class="question"> Qui sont les acteurs principaux du film "BAC Nord" ?</div>
+        <br>
+        <iframe width="30%" class="shin" scrolling="no" frameborder="no" allow="autoplay" iframe width="100%"
+          height="300" scrolling="no" frameborder="no" allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/200210886&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        <div
+          style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+          <a href="https://soundcloud.com/evasimons" title="evasimons" target="_blank"
+            style="color: #cccccc; text-decoration: none;"></a> · <a
+            href="https://soundcloud.com/evasimons/eva-simons-policeman-1" title="Eva Simons ft Konshens - Policeman"
+            target="_blank" style="color: #cccccc; text-decoration: none;"></a>
+        </div>
+
+        <div class="réponses">
+          <label for="if_string"><input type="radio" name="ifstate" value="0" id="if_string" />Vincent Cassel et Omar
+            Sy</label>
+          <br>
+
+          <label for="if_join"><input type="radio" name="ifstate" value="1" id="if_join" /> Gilles Lellouche et François
+            Civil</label>
+          <br>
+
+          <label for="if_info"><input type="radio" name="ifstate" value="0" id="if_info" />Jean Dujardin et Marion
+            Cotillard</label>
+          <br>
+
+          <label for="if_condition"><input type="radio" name="ifstate" value="0" id="if_condition" /> Romain Duris et
+            Leïla Bekhti</label>
+          <br>
+          <br>
+        </div>
+      </div>
+
+
+      <!--Le bouton pour soumettre ses réponses-->
+      <button class="boutton" type="submit" value="Submit">Valider</button>
+      <br>
+  </form>
+  <br>
+  </div>
+  <!--Dans l'élément ayant pour id grade on y intégrera le score-->
+  <p><span class="nom">Ton score : </span><span class="nom" id="grade">__</span> /4</p>
+  <br>
+  <center>
+    <p><span class="nom" id="phrase"></span></p>
+  </center>
+  <p id="grade2"></p>
+
+  <!--Script pour calculer les points obtenus au quizz-->
+  <script>
+    document.getElementById("form1").onsubmit = function () {
+      variable = parseInt(document.querySelector('input[name = "variable"]:checked').value);
+      sub = parseInt(document.querySelector('input[name = "sub"]:checked').value);
+      con = parseInt(document.querySelector('input[name = "con"]:checked').value);
+      ifstate = parseInt(document.querySelector('input[name = "ifstate"]:checked').value);
+
+      //On additionne toutes les bonnes réponses
+      result = variable + sub + con + ifstate;
+
+      document.getElementById("grade").innerHTML = result;
+
+      //Si le résultat est 4 on affiche la phrase "Bravo ! Vous êtes un véritable expert de BAC Nord !"
+      if (result == 4) {
+        document.getElementById("phrase").innerHTML = "Bravo ! Vous êtes un véritable expert de BAC Nord !";
+      }
+      //Sinon selon les scores on affiche les phrases suivantes:
+      else if (result == 3) {
+        document.getElementById("phrase").innerHTML = "Tu y es presque entraîne-toi encore un peu !"
+      }
+      else if (result == 2) {
+        document.getElementById("phrase").innerHTML = "Pas mal, mais vous êtes encore loin d'obtenir la mention Très bien ! "
+      }
+      else if (result == 1) {
+        document.getElementById("phrase").innerHTML = " Il semble que vous ayez manqué le film."
+      }
+      else if (result == 0) {
+        document.getElementById("phrase").innerHTML = "C'était pour rire là non ?"
+      }
+
+      return false;
+    }
+
+  </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <!-- Script pour afficher le menu et la sidebar lorsque l'on clique sur le bouton burger-->
+  <script type="text/javascript">
+    var content = document.querySelector('#hamburger-content');
+    var sidebarBody = document.querySelector('#hamburger-sidebar-body');
+    var button = document.querySelector('#hamburger-button');
+    var overlay = document.querySelector('#hamburger-overlay');
+    var activatedClass = 'hamburger-activated';
+    var hamburger = document.querySelector('#hamburger');
+
+    sidebarBody.innerHTML = content.innerHTML;
+
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+      this.parentNode.classList.toggle(activatedClass);
+    });
+
+    overlay.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      this.parentNode.classList.remove(activatedClass);
+    });
+
+  </script>
+  </section>
+
+</body>
+<!--Footer avec le nom et prénom du développeur, la matière et l'année-->
+<footer>
+  <p><a href="mailto:sarah.el_mchantef@utt.fr" class="foot">© EL MCHANTEF Sarah &nbsp&nbsp-&nbsp &nbspMM01
+      &nbsp&nbsp-&nbsp &nbsp2023</a></p>
+</footer>
+
+</html>

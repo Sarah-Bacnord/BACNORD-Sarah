@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Bac Nord, Action, Police">
+  <meta name="description" content="Site pour les fans du film BAC Nord ou les personnes s'y interessant">
+  <meta name="author" content="Sarah EL MCHANTEF">
+
+  <title>Synopsis</title>
+  <!--On associe la page html à une feuille de style-->
+  <link rel="stylesheet" href="../style/style.css">
+  <!--On importe les favicons-->
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon 180x180.jpg">
+  <link rel="icon" type="image/jpg" sizes="32x32" href="../img/favicon 32x32.jpg">
+  <link rel="icon" type="image/jpg" sizes="16x16" href="../img/favicon 16x16.jpg">
+  <link rel="manifest" href="../img/favicon 16x16.jpg">
+</head>
+
+<body>
+  <div class="bacnord">
+    <h1>Synopsis</h1>
+  </div>
+  <nav>
+
+    <div class="navbar">
+
+      <div id="brand">
+        <header>
+          <!-- On retrouve dans le header tout le menu ainsi que le logo-->
+          <a href="../index.html">
+            <div class="logo"><img src="../img/1062812_1600x450 (1).jpg" alt="logo_bacnord">
+          </a>
+      </div>
+
+      <div class="Navigation">
+        <div id="hamburger">
+          <!--Div qui sert de "pointeur" pour remplir le #hamburger-sidebar -->
+          <div id="hamburger-content">
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a> Personnages</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="synopsis.html">Synopsis</a>
+                <a href="acteurs.html">Acteurs</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a> Contexte</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="histoire.html">Histoire Vraie</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="distribution.html"> Distribution</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="récompenses.html">Récompenses</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="musique.html">Musiques</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="quiz.html">Quiz</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="contacts.html">Contact</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+
+            <div class="dropdown">
+              <button class="dropbtn">
+                <a href="crédit.html">Crédit</a>
+                <i class="fa fa-caret-down"></i>
+              </button>
+            </div>
+
+
+          </div>
+        </div>
+        <!-- Le bouton du menu burger et sa forme-->
+        <button id="hamburger-button">&#9776;</button>
+        <!--L'endroit où apparaitra le menu et sous-menu lorsque l'on clique sur le bouton burger-->
+        <div id="hamburger-sidebar">
+          <div id="hamburger-sidebar-header"></div>
+          <div id="hamburger-sidebar-body"></div>
+        </div>
+
+
+        <div id="hamburger-overlay"></div>
+      </div>
+    </div>
+
+  </nav>
+  <br><br>
+  <!--Le contenue de la page synopsis-->
+  <div class="texte">
+    <p>"Bac Nord" est un film policier français réalisé par Cédric Jimenez, sorti en 2021. Le film est basé sur
+      des
+      événements réels et suit les enquêtes menées par la police de Marseille sur un réseau de trafic de drogue
+      qui
+      sévit dans les quartiers nord de la ville.
+      <br>
+
+      Le film suit deux policiers, Bruno (interprété par Gilles Lellouche) et Simon (interprété par François
+      Civil),
+      qui dirigent une unité de la BAC (Brigade Anti-Criminalité) chargée de lutter contre le trafic de drogue
+      dans
+      les quartiers nord de Marseille.
+      <br>
+      Malgré leurs efforts pour démanteler le réseau, les deux policiers sont souvent confrontés à des obstacles
+      bureaucratiques et politiques, ainsi qu'à des tensions internes au sein de leur équipe.
+      <br>
+      <br>
+      <br>
+      <!--Images du scooter et du policier dans la page synopsis-->
+      <img class="scooter" src="../img/PHOTO.jpg" alt="pistolet">
+      <img class="photo" src="../img/4092859 (2) (1).jpg" alt="scooter">
+
+
+      <br>
+      <br>
+      <br>
+      <!--suite du texte pour la page synopsis-->
+
+      Au fil de l'enquête, ils doivent faire face à des choix difficiles et parfois moralement ambigus pour
+      tenter
+      de
+      mettre fin à la violence et au trafic de drogue qui sévissent dans les quartiers nord de Marseille.
+      <br>
+      Le film explore également les conséquences de la guerre contre la drogue sur les communautés locales, en
+      mettant
+      en
+      avant les vies brisées et les conflits qui en découlent. "Bac Nord" est un film intense et captivant qui
+      offre
+      un
+      regard brut sur la réalité complexe et difficile des quartiers nord de Marseille et sur le travail des
+      forces
+      de
+      l'ordre qui tentent de les protéger.
+    </p>
+
+  </div>
+  <!-- Script pour afficher le menu et la sidebar lorsque l'on clique sur le bouton burger-->
+  <script type="text/javascript">
+    var content = document.querySelector('#hamburger-content');
+    var sidebarBody = document.querySelector('#hamburger-sidebar-body');
+    var button = document.querySelector('#hamburger-button');
+    var overlay = document.querySelector('#hamburger-overlay');
+    var activatedClass = 'hamburger-activated';
+    var hamburger = document.querySelector('#hamburger');
+
+    sidebarBody.innerHTML = content.innerHTML;
+
+    //Lorsque l'on clique sur le bouton on ajoute la class 'hamburger-activated' à la div hamburger, lorsque l'on reclique dessus cette class disparait.
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+      this.parentNode.classList.toggle(activatedClass);
+    });
+
+    overlay.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      this.parentNode.classList.remove(activatedClass);
+    });
+
+  </script>
+</body>
+<!--Footer avec le nom et prénom du développeur, la matière et l'année-->
+<footer>
+  <p><a href="mailto:sarah.el_mchantef@utt.fr" class="foot">© EL MCHANTEF Sarah &nbsp&nbsp-&nbsp &nbspMM01
+      &nbsp&nbsp-&nbsp &nbsp2023</a></p>
+</footer>
+
+</html>
